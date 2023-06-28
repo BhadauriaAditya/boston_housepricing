@@ -1,1 +1,110 @@
-<h1>HEllo world</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+  <meta charset="UTF-8">
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+    }
+  
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ccc;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+      width: 100%;
+      padding: 5px;
+    }
+  
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Boston House Price Prediction</h2>
+    <form action="{{ url_for('predict')}}" method="post">
+      <div class="form-group">
+        <label for="CRIM">CRIM:</label>
+        <input type="text" id="CRIM" name="CRIM" placeholder="Enter CRIM" required="required">
+      </div>
+      <div class="form-group">
+        <label for="ZN">ZN:</label>
+        <input type="text" id="ZN" name="ZN" placeholder="Enter ZN" required="required">
+      </div>
+      <div class="form-group">
+        <label for="INDUS">INDUS:</label>
+        <input type="text" id="INDUS" name="INDUS" placeholder="Enter INDUS" required="required">
+      </div>
+      <div class="form-group">
+        <label for="CHAS">CHAS:</label>
+        <input type="text" id="CHAS" name="CHAS" placeholder="Enter CHAS" required="required">
+      </div>
+      <div class="form-group">
+        <label for="NOX">NOX:</label>
+        <input type="text" id="NOX" name="NOX" placeholder="Enter NOX" required="required">
+      </div> 
+      <div class="form-group">
+        <label for="RM">RM:</label>
+        <input type="text" id="RM" name="RM" placeholder="Enter RM" required="required">
+      </div>
+      <div class="form-group">
+        <label for="AGE">AGE:</label>
+        <input type="text" id="AGE" name="AGE" placeholder="Enter AGE" required="required">
+      </div>
+      <div class="form-group">
+        <label for="DIS">DIS:</label>
+        <input type="text" id="DIS" name="DIS" placeholder="Enter DIS" required="required">
+      </div>
+      <div class="form-group">
+        <label for="RAD">RAD:</label>
+        <input type="text" id="RAD" name="RAD" placeholder="Enter RAD" required="required">
+      </div>
+      <div class="form-group">
+        <label for="TAX">TAX:</label>
+        <input type="text" id="TAX" name="TAX" placeholder="Enter TAX" required="required">
+      </div>
+      <div class="form-group">
+        <label for="PTRATIO">PTRATIO:</label>
+        <input type="text" id="PTRATIO" name="PTRATIO" placeholder="Enter PTRATIO" required="required">
+      </div>
+      <div class="form-group">
+        <label for="B">B:</label>
+        <input type="text" id="B" name="B" placeholder="Enter B" required="required">
+      </div>
+      <div class="form-group">
+        <label for="LSTAT">LSTAT:</label>
+        <input type="text" id="LSTAT" name="LSTAT" placeholder="Enter LSTAT" required="required">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn" value="Submit">Predict</button>
+      </div>
+    </form><br><br>
+
+  </div>
+
+{{prediction_text}}
+</body>
+</html>
