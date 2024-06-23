@@ -9,6 +9,7 @@ model=pickle.load(open('regmodel.pkl','rb'))
 scaler=pickle.load(open('scaling.pkl','rb'))
 @app.route('/')
 def home():
+    
     return render_template('home_page.html')
 
 @app.route('/predict_api',methods=['POST'])
